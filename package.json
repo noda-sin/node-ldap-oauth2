@@ -11,6 +11,8 @@
     "LDAP": "https://github.com/OopsMouse/node-LDAP/tarball/master",
     "oauth2orize": "~1.0.0",
     "express": "3.1.0",
-    "jade": "*"
+    "jade": "*",
+    "mongoose": "~3.8.3",
+    "passport": "~0.1.17"
   }
 }
