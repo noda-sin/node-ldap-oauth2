@@ -1,7 +1,7 @@
-express = require("express")
-routes  = require("./routes")
-http    = require("http")
-path    = require("path")
+express = require "express"
+routes  = require "./routes"
+http    = require "http"
+path    = require "path"
 
 app = express()
 app.configure ->
