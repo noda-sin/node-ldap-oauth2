@@ -9,6 +9,7 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "LDAP": "https://github.com/OopsMouse/node-LDAP/tarball/master"
+    "LDAP": "https://github.com/OopsMouse/node-LDAP/tarball/master",
+    "oauth2orize": "~1.0.0"
   }
 }
