@@ -13,6 +13,8 @@
     "express": "3.1.0",
     "jade": "*",
     "mongoose": "~3.8.3",
-    "passport": "~0.1.17"
+    "passport": "~0.1.17",
+    "hat": "0.0.3",
+    "connect-ensure-login": "~0.1.1"
   }
 }

@@ -1,25 +1,31 @@
-express = require "express"
-routes  = require "./routes"
-http    = require "http"
-path    = require "path"
+express  = require "express"
+http     = require "http"
+path     = require "path"
+passport = require "passport"
+site     = require "./routes/site"
+oauth2   = require "./routes/oauth2"
 
 app = express()
 app.configure ->
-  app.set "port", process.env.PORT or 3000
   app.set "views", __dirname + "/views"
   app.set "view engine", "jade"
-  app.use express.favicon()
-  app.use express.logger("dev")
+  app.use express.logger()
   app.use express.bodyParser()
   app.use express.methodOverride()
+  app.use passport.initialize()
+  app.use passport.session()
   app.use app.router
   app.use express.static(path.join(__dirname, "public"))
 
-app.configure "development", ->
-  app.use express.errorHandler()
+require "./auth.js"
 
-app.get "/", routes.index
-app.get "/users", user.list
-http.createServer(app).listen app.get("port"), ->
-  console.log "Express server listening on port " + app.get("port")
+app.get  "/",           site.indexPage
+app.get  "/login.html", site.loginPage
+app.post "/login",      site.login
+app.get  "/account",    site.account
 
+app.get  "/dialog/authorize",          oauth2.authorization
+app.post "/dialog/authorize/decision", oauth2.decision
+app.post "/oauth2/token",              oauth2.token
+
+http.createServer(app).listen 3000
