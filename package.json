@@ -15,6 +15,14 @@
     "mongoose": "~3.8.3",
     "passport": "~0.1.17",
     "hat": "0.0.3",
-    "connect-ensure-login": "~0.1.1"
+    "connect-ensure-login": "~0.1.1",
+    "passport-local": "~0.1.6",
+    "passport-http": "~0.2.2",
+    "passport-http-bearer": "~1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-bootstrap": "~0.1.0",
+    "grunt-bower-task": "~0.3.4"
   }
 }

@@ -1,0 +1,38 @@
+{
+  "name": "node-ldap-oauth2",
+  "version": "0.0.1",
+  "homepage": "https://github.com/OopsMouse/node-ldap-oauth2",
+  "authors": [
+    "Noda Shimpei <noda.sin@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.0.3",
+    "jquery": "~2.0.3",
+    "font-awesome": "~4.0.3",
+    "angular": "~1.2.6"
+  },
+  "exportsOverride": {
+    "bootstrap": {
+      "js": "dist/js/bootstrap.min.js",
+      "css": "dist/css/bootstrap.min.css"
+    },
+    "jquery": {
+      "js": "jquery.min.js"
+    },
+    "angular": {
+      "js": "angular.min.js"
+    },
+    "font-awesome": {
+      "css": "css/font-awesome.min.css"
+    }
+  }
+}
