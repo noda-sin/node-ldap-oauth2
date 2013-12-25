@@ -1,0 +1,7 @@
+LDAP:
+ uri: "ldap://localhost:10389"
+ admindn: "uid=admin,ou=system"
+ adminpass: "secret"
+ userbasedn: "ou=users,ou=system"
+MongoDB:
+ uri: "mongodb://localhost/ldap-oauth2"
